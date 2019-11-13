@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  layout: 'dark',
   asyncData() {
     return {
       from: (process.server ? 'server' : 'client')

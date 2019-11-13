@@ -5,3 +5,11 @@
     <nuxt-link to="/blog">Blog</nuxt-link>
   </div>
 </template>
+
+<script>
+export default {
+  head: {
+    title: 'Home page'
+  }
+}
+</script>

@@ -12,5 +12,11 @@
   },
   "dependencies": {
     "nuxt": "^2.10.2"
+  },
+  "devDependencies": {
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
   }
 }
