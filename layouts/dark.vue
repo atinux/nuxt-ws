@@ -21,7 +21,10 @@ export default {
 
 <style lang="scss">
 body[layout="dark"] {
-  background: gray;
+  background: #333;
   color: white;
+  a {
+    color: silver;
+  }
 }
 </style>
