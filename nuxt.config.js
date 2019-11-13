@@ -10,12 +10,17 @@ export default {
       // { rel: "stylesheet", href: "https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css" }
     ]
   },
+  modules: [
+    '@/modules/blog'
+  ],
+  blog: {
+    url: 'https://jsonplaceholder.typicode.com'
+  },
   css: [
     '@/assets/css/main.scss',
     '@/assets/css/main.less'
   ],
   plugins: [
-    '@/plugins/vue-multiselect',
-    '@/plugins/api'
+    '@/plugins/vue-multiselect'
   ]
 }
