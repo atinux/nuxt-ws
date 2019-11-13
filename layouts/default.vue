@@ -6,6 +6,7 @@
       <li><nuxt-link to="/blog">Blog</nuxt-link></li>
       <li>Counter: {{ $store.state.counter }}</li>
     </ul>
+    <button @click="$store.commit('increment')">+</button>
     <nuxt/>
   </div>
 </template>

@@ -1,6 +1,6 @@
 export const state = () => {
   return {
-    counter: 0,
+    counter: 0
   }
 }
 
