@@ -13,5 +13,9 @@ export default {
   css: [
     '@/assets/css/main.scss',
     '@/assets/css/main.less'
+  ],
+  plugins: [
+    '@/plugins/vue-multiselect',
+    '@/plugins/api'
   ]
 }
