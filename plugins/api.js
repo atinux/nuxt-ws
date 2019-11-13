@@ -1,10 +1,11 @@
 export default async function (context, inject) {
+  const url = 'https://jsonplaceholder.typicode.com'
   const api = {
     posts() {
-      return fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+      return fetch(`${url}/posts`).then(res => res.json())
     },
     post(id) {
-      return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then(res => res.json())
+      return fetch(`${url}/posts/${id}`).then(res => res.json())
     }
   }
 
