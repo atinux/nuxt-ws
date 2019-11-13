@@ -16,8 +16,8 @@ export default {
       ]
     }
   },
-  async asyncData({ params }) {
-    const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`).then(res => res.json())
+  async asyncData({ app, params }) {
+    const post = await app.$api.post(params.id)
 
     return { post }
   }
