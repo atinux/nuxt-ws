@@ -1,3 +1,5 @@
+import fetch from 'node-fetch'
+
 export default {
   head: {
     title: 'Hello Workshop',
@@ -10,10 +12,21 @@ export default {
       // { rel: "stylesheet", href: "https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css" }
     ]
   },
+  generate: {
+    async routes() {
+      const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+
+      let routes = ['/blog']
+      routes = routes.concat(posts.map(post => `/blog/${post.id}`))
+
+      return routes
+    }
+  },
   modules: [
     '@/modules/blog',
     '@nuxtjs/axios',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth',
+    '@nuxtjs/pwa'
   ],
   blog: {
     url: 'https://jsonplaceholder.typicode.com'
