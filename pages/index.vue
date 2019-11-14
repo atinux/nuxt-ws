@@ -4,6 +4,7 @@
     <nuxt-link to="/about">About page</nuxt-link>
     <nuxt-link to="/blog">Blog</nuxt-link>
     <multiselect v-model="value" :options="options"></multiselect>
+    <my-button>Test</my-button>
   </div>
 </template>
 

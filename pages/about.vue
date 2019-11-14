@@ -5,6 +5,7 @@
       <multiselect v-model="value" :options="options"></multiselect>
     </client-only>
     <nuxt-link to="/">Home page</nuxt-link>
+    <my-button>Test</my-button>
   </div>
 </template>
 

@@ -21,6 +21,7 @@ export default {
     '@/assets/css/main.less'
   ],
   plugins: [
-    '@/plugins/vue-multiselect'
+    '@/plugins/vue-multiselect',
+    '@/plugins/components'
   ]
 }
