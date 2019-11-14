@@ -11,5 +11,8 @@ sw.*
 # Nuxt generate
 dist
 
+#Test
+coverage
+
 # IDE
 .idea
