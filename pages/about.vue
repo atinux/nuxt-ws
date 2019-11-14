@@ -4,8 +4,11 @@
     <client-only placeholder="wait">
       <multiselect v-model="value" :options="options"></multiselect>
     </client-only>
-    <nuxt-link to="/">Home page</nuxt-link>
     <my-button>Test</my-button>
+    <div v-if="$auth.loggedIn">
+      <h1>Hello {{ $auth.user.name }}</h1>
+      <img :src="$auth.user.avatar_url"/>
+    </div>
   </div>
 </template>
 

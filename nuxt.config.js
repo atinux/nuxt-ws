@@ -11,10 +11,24 @@ export default {
     ]
   },
   modules: [
-    '@/modules/blog'
+    '@/modules/blog',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
   blog: {
     url: 'https://jsonplaceholder.typicode.com'
+  },
+  auth: {
+    redirect: {
+      callback: '/callback'
+    },
+    // Options
+    strategies: {
+      github: {
+        client_id: '4420a6ce8bcdf49d97a5',
+        client_secret: '<REPLACE WITH SLACK MESSAGE>'
+      }
+    }
   },
   css: [
     '@/assets/css/main.scss',
