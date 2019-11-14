@@ -14,7 +14,7 @@ export default {
   },
   generate: {
     async routes() {
-      const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+      const posts: any[] = await fetch('https://jsonplaceholder.typicode.com/posts', {}).then(res => res.json())
 
       let routes = ['/blog']
       routes = routes.concat(posts.map(post => `/blog/${post.id}`))
@@ -22,6 +22,9 @@ export default {
       return routes
     }
   },
+  buildModules: [
+    '@nuxt/typescript-build'
+  ],
   modules: [
     '@/modules/blog',
     '@nuxtjs/axios',

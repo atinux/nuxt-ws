@@ -5,12 +5,13 @@
   "author": "Atinux",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^0.2.4",
     "@nuxtjs/auth": "^4.8.4",
     "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/pwa": "^3.0.0-beta.19",
@@ -18,6 +19,8 @@
     "vue-multiselect": "^2.1.6"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.3.4",
+    "@types/node-fetch": "^2.5.3",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "node-sass": "^4.13.0",

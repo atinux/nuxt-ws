@@ -12,7 +12,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Context } from '@nuxt/types'
+
 export default {
   layout: 'dark',
   middleware: 'authenticated',
@@ -22,7 +24,7 @@ export default {
       options: ['list', 'of', 'options']
     }
   },
-  asyncData() {
+  asyncData(context: Context) {
     return {
       from: (process.server ? 'server' : 'client')
     }
