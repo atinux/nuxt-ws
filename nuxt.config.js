@@ -1,4 +1,5 @@
 export default {
+  mode: 'spa',
   head: {
     title: 'Hello Workshop',
     meta: [
@@ -10,8 +11,16 @@ export default {
       // { rel: "stylesheet", href: "https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css" }
     ]
   },
+  env: {
+    API_URL: process.env.API_URL || 'https://jsonplaceholder.typicode.com'
+  },
   css: [
     '@/assets/css/main.scss',
     '@/assets/css/main.less'
+  ],
+  plugins: [
+    '@/plugins/vue-multiselect.js',
+    '@/plugins/api.js',
+    '@/plugins/init.js'
   ]
 }

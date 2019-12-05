@@ -14,8 +14,8 @@ export default {
   head: {
     title: 'Blog'
   },
-  async asyncData() {
-    const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+  async asyncData({ app }) {
+    const posts = await app.$api.getPosts()
 
     return { posts: posts.slice(0, 10) }
   }
